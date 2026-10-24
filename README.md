@@ -19,15 +19,15 @@ Website thương mại điện tử chuyên bán nơ và phụ kiện tóc dành
 
 Hệ thống màu sắc được quản lý 100% bằng CSS Variables tại `src/styles/global.css`:
 
-| Tên màu | Mã Hex | Vai trò |
-| :--- | :--- | :--- |
-| **Hồng pastel** | `#F7C8D8` | Màu thương hiệu, nền nhẹ, viền trang trí |
-| **Hồng đậm** | `#E98BAA` | Nút nhấn phụ, tag nổi bật |
-| **Hồng phấn nhạt** | `#FFF0F5` | Nền các khối nội dung, card, banner |
-| **Trắng kem** | `#FFFCF8` | Nền chính của toàn website |
-| **Đỏ cherry** | `#C84B68` | Điểm nhấn chính: Logo, nút Mua hàng, giá khuyến mãi |
-| **Nâu chữ** | `#55434A` | Màu chữ đọc chính, dịu mắt hơn màu đen tuyền |
-| **Trắng tinh khôi** | `#FFFFFF` | Nền card sản phẩm, header nổi |
+| Tên màu                   | Mã Hex     | Vai trò                                                     |
+| :-------------------------- | :---------- | :----------------------------------------------------------- |
+| **Hồng pastel**      | `#F7C8D8` | Màu thương hiệu, nền nhẹ, viền trang trí             |
+| **Hồng đậm**       | `#E98BAA` | Nút nhấn phụ, tag nổi bật                               |
+| **Hồng phấn nhạt** | `#FFF0F5` | Nền các khối nội dung, card, banner                      |
+| **Trắng kem**        | `#FFFCF8` | Nền chính của toàn website                               |
+| **Đỏ cherry**       | `#C84B68` | Điểm nhấn chính: Logo, nút Mua hàng, giá khuyến mãi |
+| **Nâu chữ**         | `#55434A` | Màu chữ đọc chính, dịu mắt hơn màu đen tuyền      |
+| **Trắng tinh khôi** | `#FFFFFF` | Nền card sản phẩm, header nổi                            |
 
 ---
 
@@ -47,6 +47,7 @@ Hệ thống màu sắc được quản lý 100% bằng CSS Variables tại `src
 ## 🛍️ 4. Các Chức Năng Chính Hoạt Động Thực Tế
 
 ### 🏠 Trang Chủ (`/`)
+
 1. **Announcement Bar:** Thông báo Freeship từ 199K kèm hiệu ứng đóng mở linh hoạt.
 2. **Sticky Header:** Thanh điều hướng mờ kính (glassmorphism) tinh tế, huy hiệu giỏ hàng & yêu thích nhảy số tự động.
 3. **Hero Section:** Bố cục editorial thời trang 2 cột, huy hiệu nơ bồng bềnh và nút khám phá.
@@ -66,6 +67,7 @@ Hệ thống màu sắc được quản lý 100% bằng CSS Variables tại `src
 10. **Footer:** Đầy đủ thông tin cửa hàng, chính sách đổi trả 7 ngày, hướng dẫn bảo quản và mạng xã hội.
 
 ### 🛒 Trang Cửa Hàng (`/shop`)
+
 - Bộ lọc danh mục (Tất cả, Nơ lụa, Nơ mini, Kẹp ruy băng, Hộp quà tặng, Băng đô, Scrunchies).
 - Lọc theo khoảng giá (Dưới 50K, 50K-100K, Trên 100K).
 - Lọc theo màu sắc thực tế (Hồng pastel, Đỏ cherry, Trắng kem, Đen tuyền, Vàng bơ, Xanh baby).
@@ -76,6 +78,7 @@ Hệ thống màu sắc được quản lý 100% bằng CSS Variables tại `src
 - Phân trang & nút "Tải thêm sản phẩm".
 
 ### 🎀 Trang Chi Tiết Sản Phẩm (`/product/:id`)
+
 - Gallery nhiều góc ảnh độ phân giải cao kèm thumbnail chọn ảnh.
 - Chọn bảng màu sắc nơ trực quan.
 - Tăng giảm số lượng sản phẩm.
@@ -84,6 +87,7 @@ Hệ thống màu sắc được quản lý 100% bằng CSS Variables tại `src
 - Gợi ý sản phẩm tương tự cùng danh mục.
 
 ### 🛍️ Giỏ Hàng & Mini-Cart Drawer (`/cart` & `CartDrawer`)
+
 - Thêm, sửa số lượng, xóa sản phẩm nhanh chóng.
 - Tự động tính thành tiền từng món và tổng đơn hàng.
 - **Thanh đo tiến độ Miễn phí vận chuyển (Threshold 199.000₫)** với % và số tiền cần mua thêm.
@@ -95,6 +99,7 @@ Hệ thống màu sắc được quản lý 100% bằng CSS Variables tại `src
 - Lựa chọn đóng gói hộp quà tặng miễn phí kèm ô nhập nội dung thiệp viết tay gửi tặng người thương.
 
 ### 💳 Trang Thanh Toán (`/checkout`) & Xác Nhận Đơn Hàng (`/order-success`)
+
 - Điền họ tên, số điện thoại, email, địa chỉ giao hàng, tỉnh/thành phố, ghi chú.
 - Kiểm tra hợp lệ dữ liệu form trước khi gửi.
 - 3 phương thức thanh toán mô phỏng:
@@ -164,12 +169,15 @@ duan1/
 ## 💻 6. Hướng Dẫn Chạy Dự Án Trên Windows (VS Code)
 
 ### Bước 1: Mở thư mục dự án trong VS Code
+
 Mở VS Code, chọn **File > Open Folder...** và chọn thư mục `d:\VSCODE\PROJECT\duan1`.
 
 ### Bước 2: Mở Terminal trong VS Code
-Nhấn tổ hợp phím **`` Ctrl + ` ``** (hoặc chọn menu **Terminal > New Terminal**).
+
+Nhấn tổ hợp phím **``Ctrl + ` ``** (hoặc chọn menu **Terminal > New Terminal**).
 
 ### Bước 3: Chạy ứng dụng
+
 Trong cửa sổ PowerShell của VS Code, chạy lệnh:
 
 ```powershell
@@ -178,12 +186,14 @@ npm run dev
 
 > **Ghi chú nếu máy bạn sử dụng Node.js tùy biến:**
 > Nếu lệnh `npm` chưa nằm trong biến môi trường PATH mặc định, bạn chỉ cần chạy lệnh sau một lần trong Terminal:
+>
 > ```powershell
 > $env:PATH = "D:\nodejs\node-v20.18.0-win-x64;" + $env:PATH
 > npm run dev
 > ```
 
 Sau khi chạy lệnh, Terminal sẽ hiển thị đường link:
+
 ```
   VITE v5.4.11  ready in 320 ms
 
@@ -193,11 +203,15 @@ Sau khi chạy lệnh, Terminal sẽ hiển thị đường link:
 Nhấn giữ phím **Ctrl** và nhấp chuột vào liên kết `http://localhost:3000/` (hoặc mở trình duyệt và gõ địa chỉ đó) để chiêm ngưỡng website BOWIE!
 
 ### Bước 4: Đóng gói sản phẩm (Build Production)
+
 Khi muốn xuất bản sản phẩm ra thư mục `dist`:
+
 ```powershell
 npm run build
 ```
+
 Và xem thử bản build:
+
 ```powershell
 npm run preview
 ```
@@ -205,4 +219,3 @@ npm run preview
 ---
 
 *BOWIE — Little Bows, Big Love 🎀✨*
-
