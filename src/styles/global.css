@@ -1,0 +1,400 @@
+/* ===================================================================
+   BOWIE — LITTLE BOWS, BIG LOVE
+   GLOBAL STYLES & DESIGN TOKENS
+   =================================================================== */
+
+:root {
+  /* Core Pastel Palette */
+  --pink-pastel: #F7C8D8;
+  --pink-dark: #E98BAA;
+  --pink-powder: #FFF0F5;
+  --white-cream: #FFFCF8;
+  --cherry-red: #C84B68;
+  --cherry-hover: #B23D57;
+  --text-brown: #55434A;
+  --text-muted: #8C7B83;
+  --text-light: #B5A3AB;
+  --white: #FFFFFF;
+  
+  /* Accents & States */
+  --border-pink: #F3D4DF;
+  --border-light: #FCE8F0;
+  --bg-tint: #FFF7FA;
+  --bg-warm: #FFF9F3;
+  --star-gold: #FFB347;
+  
+  /* Shadows */
+  --shadow-subtle: 0 2px 10px rgba(142, 85, 105, 0.04);
+  --shadow-sm: 0 4px 14px rgba(142, 85, 105, 0.07);
+  --shadow-md: 0 10px 28px rgba(142, 85, 105, 0.09);
+  --shadow-lg: 0 18px 45px rgba(142, 85, 105, 0.12);
+  --shadow-glow: 0 0 20px rgba(247, 200, 216, 0.6);
+
+  /* Radius */
+  --radius-xs: 6px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --radius-pill: 9999px;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-handwriting: 'Caveat', cursive;
+  --font-editorial: 'Cormorant Garamond', Georgia, serif;
+
+  /* Transitions */
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Container */
+  --container-max: 1240px;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--white-cream);
+  color: var(--text-brown);
+  line-height: 1.6;
+  font-size: 15px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--pink-powder);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--pink-pastel);
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--pink-powder);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pink-dark);
+}
+
+/* Image defaults */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Links & Buttons */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  transition: all var(--transition-normal);
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 14.5px;
+  outline: none;
+  color: var(--text-brown);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Typography Helpers */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting);
+}
+
+.text-cherry {
+  color: var(--cherry-red) !important;
+}
+
+.text-pink-dark {
+  color: var(--pink-dark) !important;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* Section Header Shared */
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 40px auto;
+  position: relative;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background: var(--pink-powder);
+  color: var(--cherry-red);
+  font-size: 12.5px;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  border: 1px solid var(--border-pink);
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--text-brown);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 15.5px;
+  line-height: 1.6;
+}
+
+.bow-decor-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 14px 0 0 0;
+  color: var(--pink-dark);
+}
+
+.bow-decor-divider::before,
+.bow-decor-divider::after {
+  content: '';
+  height: 1px;
+  width: 50px;
+  background: linear-gradient(to right, transparent, var(--border-pink));
+}
+
+.bow-decor-divider::after {
+  background: linear-gradient(to left, transparent, var(--border-pink));
+}
+
+/* Shared Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 14.5px;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--cherry-red);
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(200, 75, 104, 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--cherry-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(200, 75, 104, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-pink {
+  background: var(--pink-dark);
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(233, 139, 170, 0.3);
+}
+
+.btn-pink:hover {
+  background: #db7697;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(233, 139, 170, 0.4);
+}
+
+.btn-secondary {
+  background: var(--pink-powder);
+  color: var(--text-brown);
+  border: 1px solid var(--border-pink);
+}
+
+.btn-secondary:hover {
+  background: var(--pink-pastel);
+  color: var(--text-brown);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--cherry-red);
+  color: var(--cherry-red);
+}
+
+.btn-outline:hover {
+  background: var(--cherry-red);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-brown);
+}
+
+.btn-ghost:hover {
+  background: var(--pink-powder);
+  color: var(--cherry-red);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+.btn-lg {
+  padding: 15px 32px;
+  font-size: 16px;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.badge-cherry {
+  background: var(--cherry-red);
+  color: var(--white);
+}
+
+.badge-pink {
+  background: var(--pink-pastel);
+  color: var(--text-brown);
+}
+
+.badge-soft {
+  background: var(--pink-powder);
+  color: var(--cherry-red);
+  border: 1px solid var(--border-pink);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseHeart {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.22); }
+  100% { transform: scale(1); }
+}
+
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes ribbonShine {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.animate-float {
+  animation: floatSoft 3.5s ease-in-out infinite;
+}
+
+/* Layout Utilities */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main.main-content {
+  flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 1.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .section-header {
+    margin-bottom: 28px;
+  }
+  .section-title {
+    font-size: 1.65rem;
+  }
+  .btn-lg {
+    padding: 13px 24px;
+    font-size: 14.5px;
+  }
+}
+
